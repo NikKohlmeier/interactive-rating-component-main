@@ -1,11 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const rating1 = document.querySelector('#button-1');
 const rating2 = document.querySelector('#button-2');
 const rating3 = document.querySelector('#button-3');
 const rating4 = document.querySelector('#button-4');
 const rating5 = document.querySelector('#button-5');
 
-const ratingDiv = document.querySelector('#rating-div');
-const successDiv = document.querySelector('#success-div');
+const ratingDiv = document.querySelector('.rating-div');
+const successDiv = document.querySelector('.success-div');
 
 const ratingArray = [rating1, rating2, rating3, rating4, rating5];
 
@@ -17,7 +19,6 @@ const ratingClick = e => {
     for (let i = 0; i < ratingArray.length; i++) {
         if (ratingArray[i].classList[1] === 'active-button') {
             ratingArray[i].classList.remove('active-button');
-            //activeButtonValue = ratingArray[i].value;
         }
     };
 
@@ -28,8 +29,8 @@ const ratingClick = e => {
 };
 
 const submitEvent = () => {
-    ratingDiv.style.display = 'none';
-    successDiv.style.display = 'flex';
+    ratingDiv.classList.add('is-hidden');
+    successDiv.classList.remove('is-hidden');
 
     ratingP.innerHTML = `You selected ${activeButtonValue} out of 5`;
 }
@@ -39,3 +40,5 @@ document.querySelectorAll('.rating-button').forEach(btn => {
 });
 
 document.addEventListener('submit', submitEvent);
+
+})

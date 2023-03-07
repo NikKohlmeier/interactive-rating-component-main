@@ -1,3 +1,6 @@
+/*******************
+** GLOBAL STYLES **
+*******************/
 :root {
     --primary-orange: hsl(25, 97%, 53%);
     --light-grey: hsl(217, 12%, 63%);
@@ -28,6 +31,48 @@ body p {
     color: var(--light-grey);
 }
 
+input {
+    border: none;
+    font-family: "Overpass", sans-serif;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.text--orange {
+    color: var(--primary-orange);
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.attribution {
+    font-size: .8em;
+    display: flex;
+    color: var(--med-dark-grey)
+}
+
+.attribution a {
+    color: var(--medgrey);
+}
+
+/******************
+** RATING STYLES **
+******************/
+
 .main-container {
     display: flex;
     background-color: var(--dark-blue);
@@ -37,11 +82,7 @@ body p {
     padding: 35px;
 }
 
-.thank-you-p, h2 {
-    text-align: center;
-}
-
-.description {
+.margin-bottom-30 {
     margin-bottom: 30px;
 }
 
@@ -55,18 +96,9 @@ body p {
     width: 3em;
 }
 
-.rating-container {
-    align-items: center;
-}
-
 .rating-numbers {
     display: flex;
     justify-content: space-between;
-}
-
-input {
-    border: none;
-    font-family: "Overpass", sans-serif;
 }
 
 .rating-button {
@@ -117,12 +149,11 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-#success-div {
-    display: none;
-    flex-direction: column;
-}
+/*********************
+** THANK YOU STYLES **
+*********************/
 
-.image-container {
+.center-image {
     margin: 0 auto;
     padding: 1em;
 }
@@ -133,19 +164,4 @@ input[type="submit"]:hover {
     padding: .5em 1em;
     border-radius: 3em;
     color: var(--primary-orange)
-}
-
-.thank-you-p {
-    margin-top: 0;
-}
-
-.thank-you-container {
-    display: none;
-}
-
-.flex-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
